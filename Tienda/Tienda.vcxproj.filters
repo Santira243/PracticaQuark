@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Archivos de origen">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Archivos de encabezado">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Archivos de recursos">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="App">
+      <UniqueIdentifier>{36a32224-f461-452f-a028-aca7277d1fc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain">
+      <UniqueIdentifier>{3fd12a18-e91b-4625-a58b-7b4701824c9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Presenter">
+      <UniqueIdentifier>{4d303206-46f2-417b-8fc1-8e5b2decfc5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View">
+      <UniqueIdentifier>{49c4e3d2-0708-471b-ba4b-0dad4af77bb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\Vendedor">
+      <UniqueIdentifier>{eeadb1e2-7071-487f-ae70-85e74a642e10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\Cotizacion">
+      <UniqueIdentifier>{dad8f2f2-e733-4274-b957-674671b0433e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\Prenda">
+      <UniqueIdentifier>{b10aa397-1135-4719-a619-a0f25e610dae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\Prenda\Factory">
+      <UniqueIdentifier>{06605f4a-0b55-4833-8631-493363d9a00d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\Prenda\Tipos">
+      <UniqueIdentifier>{dc0d9903-88c0-4210-ab64-ab9d0b26e44a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\Prenda\Tipos\Componentes">
+      <UniqueIdentifier>{a5c28cf4-66c9-49c7-a75d-a574ce254178}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\Tienda">
+      <UniqueIdentifier>{b84f2ed0-7bff-4e45-8f8a-c74386bde7e5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Main.cpp">
+      <Filter>App</Filter>
+    </ClCompile>
+    <ClCompile Include="..\View.cpp">
+      <Filter>View</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Presenter.cpp">
+      <Filter>Presenter</Filter>
+    </ClCompile>
+    <ClCompile Include="Vendedor.cpp">
+      <Filter>Domain\Vendedor</Filter>
+    </ClCompile>
+    <ClCompile Include="Cotizacion.cpp">
+      <Filter>Domain\Cotizacion</Filter>
+    </ClCompile>
+    <ClCompile Include="Prenda.cpp">
+      <Filter>Domain\Prenda</Filter>
+    </ClCompile>
+    <ClCompile Include="Prenda_factory.cpp">
+      <Filter>Domain\Prenda\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Camisa.cpp">
+      <Filter>Domain\Prenda\Tipos</Filter>
+    </ClCompile>
+    <ClCompile Include="Cuello.cpp">
+      <Filter>Domain\Prenda\Tipos\Componentes</Filter>
+    </ClCompile>
+    <ClCompile Include="Pantalon.cpp">
+      <Filter>Domain\Prenda\Tipos</Filter>
+    </ClCompile>
+    <ClCompile Include="Tienda.cpp">
+      <Filter>Domain\Tienda</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\View.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Presenter.h">
+      <Filter>Presenter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\IView.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendedor.h">
+      <Filter>Domain\Vendedor</Filter>
+    </ClInclude>
+    <ClInclude Include="Cotizacion.h">
+      <Filter>Domain\Cotizacion</Filter>
+    </ClInclude>
+    <ClInclude Include="Prenda.h">
+      <Filter>Domain\Prenda</Filter>
+    </ClInclude>
+    <ClInclude Include="Prenda_factory.h">
+      <Filter>Domain\Prenda\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Camisa.h">
+      <Filter>Domain\Prenda\Tipos</Filter>
+    </ClInclude>
+    <ClInclude Include="Cuello.h">
+      <Filter>Domain\Prenda\Tipos\Componentes</Filter>
+    </ClInclude>
+    <ClInclude Include="Pantalon.h">
+      <Filter>Domain\Prenda\Tipos</Filter>
+    </ClInclude>
+    <ClInclude Include="Tienda.h">
+      <Filter>Domain\Tienda</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

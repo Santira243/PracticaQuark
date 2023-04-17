@@ -1,0 +1,6 @@
+﻿  Vendedor.cpp
+View.obj : error LNK2019: símbolo externo "private: void __thiscall View::showMainMenu(void)" (?showMainMenu@View@@AAEXXZ) sin resolver al que se hace referencia en la función "public: __thiscall View::View(void)" (??0View@@QAE@XZ)
+View.obj : error LNK2019: símbolo externo "public: __thiscall Presenter::Presenter(class IView *)" (??0Presenter@@QAE@PAVIView@@@Z) sin resolver al que se hace referencia en la función "public: __thiscall View::View(void)" (??0View@@QAE@XZ)
+Camisa.obj : error LNK2001: símbolo externo "private: static unsigned int Camisa::cantidad_stock" (?cantidad_stock@Camisa@@0IA) sin resolver
+Pantalon.obj : error LNK2001: símbolo externo "private: static unsigned int Pantalon::cantidad_stock" (?cantidad_stock@Pantalon@@0IA) sin resolver
+D:\QUARK_C_FINAL\Prueba_final\Tienda\Debug\Tienda.exe : fatal error LNK1120: 4 externos sin resolver
