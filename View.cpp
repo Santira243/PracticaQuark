@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include "View.h"
 #include "Presenter.h"
-//#include "Weapon.h" ACA LA PRINCIPAL
+#include "Tienda/Prenda.h" 
 #include <algorithm>
 #include <vector>
 
@@ -21,8 +21,6 @@ View::View()
 View::~View()
 {
 	delete m_presenter;
-	//std::for_each(m_weaponMenuItems.begin(), m_weaponMenuItems.end(), [](const auto& itr) { delete (itr.second); });
-	//m_weaponMenuItems.clear();
 }
 
 void View::showText(const char* text)
@@ -36,70 +34,52 @@ void View::showText(const std::string& text)
 	std::cout << text << std::endl;
 }
 
-/*
-void View::setWeaponMenuItems(const std::map<WeaponType, Weapon*>& items)
-{
-	if (items.empty())
-	{
-		showText("Ups!... parece que no hay armas disponibles por aquí...");
-	}
-	else
-	{
-		m_weaponMenuItems = items;
-	}
-}
 
-void View::showMenuToTakeAWeapon()
+
+void View::showMenuCotizar()
 {
 	std::string optionString = "";
 	bool isValidOption = true;
 	do
 	{
 		std::system("cls");
-		showText("Por favor, escoja el arma que desea utilizar:");
+		showText("Por favor, escoja prenda a cotizar:");
 		showText("");
 
-		// mostramos las opciones del menú que permiten seleccionar un arma para el soldado
-		// para ello le pedimos al presenter que nos traiga las opciones del menú ya armadas.
-		m_presenter->getListOfWeaponMenuItems();
-
-		for (const auto& item : m_weaponMenuItems)
-		{
-			const auto* weapon = m_weaponMenuItems[item.first];
-			std::string weaponName = weapon->getName();
-			auto numberOfItem = (int)item.first;
-			std::string  str_numberOfItem = std::to_string(numberOfItem);
-			std::string menuItem = str_numberOfItem + "- " + weaponName; // construímos el ítem/opción de menú (por ejemplo: "2- Rifle")
-			showText(menuItem.c_str());
-		}
-
+		// mostramos las opciones del menú que permiten seleccionar prenda a cotizar.
+		
+		// PANTALON O CAMISA
+		// EN funcion de respuesta mandar a la siguiente -> showTipoCamisa o showTipoPantalon
 		showText("X- Volver atrás...");
 		std::cin >> optionString;
-		selectWeapon(optionString.c_str(), isValidOption);
+		selectPrenda(optionString.c_str(), isValidOption); //validar la opción escogida
 		std::cin.get();
 	} while (!isValidOption);
 
 	showMainMenu();
 }
 
-void View::selectWeapon(const char* option, bool& isValidOption)
+void View::selectPrenda(const char* option, bool& isValidOption)
 {
 	try
 	{
 		int optionInt = std::stoi(option);
-		for (const auto& item : m_weaponMenuItems)
+		
+		if (optionInt == 1)
 		{
-			if (optionInt == (int)item.first)
-			{
-				m_presenter->pickupWeapon(optionInt);
-				isValidOption = true;
-				std::cin.get();
-				break;
-			}
-			else
-			{
-				isValidOption = false;
-			}
+			//Camisa
+			isValidOption = true;
+			std::cin.get();
+		} 
+		else if (optionInt == 2)
+		{
+			//Pantalon
+			isValidOption = true;
+			std::cin.get();
+		}
+		else
+		{
+			isValidOption = false;
 		}
 		if (!isValidOption)
 		{
@@ -115,7 +95,7 @@ void View::selectWeapon(const char* option, bool& isValidOption)
 		{
 			isValidOption = true;
 			std::system("cls");
-			showText("Okay, el soldado no recogió ningún arma... Volveremos al menú principal.");
+			showText("Volveremos al menú principal.");
 			std::cin.get();
 		}
 		else
@@ -138,23 +118,22 @@ void View::showMainMenu()
 	do
 	{
 		std::system("cls");
-		showText("-== Bienvenido al campo de entrenamiento, Soldado ==-");
+		showText("-== Bienvenido al Cotizador Express ==-");
+		//Aca nombre de tienda y dirección
 		showText("¿Qué desea hacer?");
 		showText("");
-		showText("1- Recoger Arma");
-		showText("2- Dejar Arma");
-		showText("3- Disparar");
-		showText("4- Ver Arma en uso");
+		showText("1- Historial de cotizaciones");
+		showText("2- Realizar cotización");
 		showText("X- Salir");
 		std::cin >> option;
 		std::system("cls");
-		runOption(option.c_str(), exitCondition);
+		//runOption(option.c_str(), exitCondition);
 		showText("");
 		showText(ANY_KEY_MESSAGE);
 		std::cin.get();
 	} while (!exitCondition);
 }
-
+/*
 void View::runOption(const char* option, bool& exitCondition)
 {
 	auto str_option = std::string(option);

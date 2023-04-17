@@ -19,6 +19,11 @@ const char* Tienda::nombre_tienda()
 	return nombre;
 }
 
+const char* Tienda::direccion_tienda()
+{
+	return direccion;
+}
+
 Prenda Tienda::listar_prendas()
 {
 	return Prendas_existentes[0];

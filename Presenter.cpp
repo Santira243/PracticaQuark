@@ -1,15 +1,16 @@
 #include "Presenter.h"
 #include "IView.h"
-//#include "Soldier.h"
-//#include "Weapon.h"
+#include "Tienda/Tienda.h"
 
-//Presenter::Presenter(IView* view) : m_view(view), m_soldier(new Soldier())
-//{
-//}
+
+Presenter::Presenter(IView* view) : m_view(view), m_tienda(new Tienda(tienda_n, direccion_n))  //INICIALIZADA PARA ESTE EJEMPLO.
+{
+	
+}
 
 Presenter::~Presenter()
 {
-	delete m_soldier;
+	delete m_tienda;
 };
 /*
 void Presenter::shoot()

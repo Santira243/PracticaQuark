@@ -17,6 +17,7 @@ public:
 	Tienda(char* name, char* direcc);
 	void agregar_prendas(Prenda nueva);
 	const char* nombre_tienda();
+	const char* direccion_tienda();
 	Prenda listar_prendas();
 	//void eliminar_prendas();
 	//modificar_tienda();
