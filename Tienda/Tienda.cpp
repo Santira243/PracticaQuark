@@ -24,7 +24,7 @@ const char* Tienda::direccion_tienda()
 	return direccion;
 }
 
-Prenda Tienda::listar_prendas()
+vector<Prenda> Tienda::listar_prendas()
 {
-	return Prendas_existentes[0];
+	return Prendas_existentes;
 }

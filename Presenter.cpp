@@ -3,15 +3,22 @@
 #include "Tienda/Tienda.h"
 
 
-Presenter::Presenter(IView* view) : m_view(view), m_tienda(new Tienda(tienda_n, direccion_n))  //INICIALIZADA PARA ESTE EJEMPLO.
+Presenter::Presenter(IView* view) : m_view(view)  //INICIALIZADA PARA ESTE EJEMPLO.
 {
-	
+	strcpy_s(tienda_n, 20, "Tienda Nube 2.0");
+	strcpy_s(direccion_n, 20, "Campamento 406");
+	m_tienda = new Tienda(tienda_n, direccion_n);
 }
 
 Presenter::~Presenter()
 {
 	delete m_tienda;
 };
+
+Tienda* Presenter::datos_tienda()
+{
+	return m_tienda;
+}
 /*
 void Presenter::shoot()
 {

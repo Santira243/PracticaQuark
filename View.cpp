@@ -34,7 +34,14 @@ void View::showText(const std::string& text)
 	std::cout << text << std::endl;
 }
 
-
+void View::showText(const char* text1, const char* text2)
+{
+	std::cout << text1 << " || " <<  text2 << std::endl;
+}
+void View::showSeparador()
+{
+	std::cout << "---------------------------------------" << std::endl;
+}
 
 void View::showMenuCotizar()
 {
@@ -114,12 +121,17 @@ void View::showMainMenu()
 {
 	std::string option;
 	bool exitCondition = false;
+	Tienda* datos;
 
 	do
 	{
 		std::system("cls");
 		showText("-== Bienvenido al Cotizador Express ==-");
+		showSeparador();
 		//Aca nombre de tienda y dirección
+		datos = m_presenter->datos_tienda();
+		showText(datos->nombre_tienda(),datos->direccion_tienda());
+		showSeparador();
 		showText("¿Qué desea hacer?");
 		showText("");
 		showText("1- Historial de cotizaciones");

@@ -1,5 +1,6 @@
-﻿  Presenter.cpp
+﻿  Main.cpp
+  Presenter.cpp
   View.cpp
-  Vendedor.cpp
+  Tienda.cpp
   Generando código...
   Tienda.vcxproj -> D:\QUARK_C_FINAL\GitHub\PracticaQuark\Debug\Tienda.exe

@@ -8,13 +8,15 @@ class Presenter
 {
 private:
 	IView* m_view = nullptr;
-	Tienda* m_tienda = nullptr;
-	char tienda_n[20] = "Tienda Nube 2.0";
-	char direccion_n[20] = "Campamento 406";
-
+	
+	char tienda_n[20];
+	char direccion_n[20];
+	Tienda* m_tienda;
+	
 public:
 	explicit Presenter(IView* view);
 	~Presenter();
+	Tienda* datos_tienda();
 	//void pickupWeapon(int option);
 	//void getListOfWeaponMenuItems();
 	//void shoot();
