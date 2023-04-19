@@ -14,7 +14,7 @@ public:
 	virtual ~Prenda() = default;
 	static Prenda* pickup(int prendaSelected);
 	static std::map<PrendaType, Prenda*> getConstants();
-	const char* getName();
+	const char* getName() const;
 	void m_calidad(char nueva_calidad);
 	char devolver_calidad();
 	void m_cantidad(unsigned int valor_stock);
@@ -23,10 +23,10 @@ public:
 	float devolver_precio();
 	virtual void actualiza_descuento(float* precio_actualizar);
 protected:
-	const char* m_name;
+	const char* m_name=0;
 private:
 	char calidad=0;	
-	float precio_unit;
-	unsigned int cantidad_stock;
+	float precio_unit=0;
+	unsigned int cantidad_stock=0;
 };
 #endif //PRENDA_H

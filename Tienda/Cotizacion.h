@@ -1,8 +1,7 @@
 #pragma once
 #ifndef COTIZACION_H
 #define COTIZACION_H
-
-class Prenda; 
+#include "Prenda.h"
 
 class Cotizacion
 {
